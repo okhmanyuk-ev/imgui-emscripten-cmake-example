@@ -4,7 +4,7 @@ project(imgui-emscripten-cmake-example)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(EXECUTABLE_OUTPUT_PATH ../../)
+set(EXECUTABLE_OUTPUT_PATH ../output)
 
 add_executable(${PROJECT_NAME} 
 	imgui/examples/example_emscripten_opengl3/main.cpp
