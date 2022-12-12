@@ -4,11 +4,15 @@ project(imgui-emscripten-cmake-example)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+set(EXECUTABLE_OUTPUT_PATH ../../)
+
 add_executable(${PROJECT_NAME} 
 	imgui/examples/example_emscripten_opengl3/main.cpp
 	imgui/backends/imgui_impl_sdl.cpp
 	imgui/backends/imgui_impl_opengl3.cpp
 )
+
+set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME "index")
 
 target_include_directories(${PROJECT_NAME} PUBLIC
 	imgui/backends
